@@ -1,0 +1,18 @@
+db.estados.update(
+    { sigla: "SP"}, 
+    { $set: {populacao: 45340000}}
+)
+
+----------------------------
+
+db.estados.update(
+    { sigla: "PB"}, 
+    { $set: {cidade: [{nome: "João Pessoa"}]}}
+)
+
+----------------------------
+
+db.estados.update(
+    { sigla: "PB"}, 
+    { $push: {cidade: [{nome: "João Pessoa", populacao: 4339666}]}}
+)
